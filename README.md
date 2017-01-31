@@ -6,7 +6,7 @@ Tested with Mongo 2.4.x and Elasticsearch 2.3.
 Installs:
 * Latest Python (currentl 3.6.0)
 * Latest mongo-connector (currently 2.5.0)
-* Latest elastic2-doc-manager[eleastic2] (currently 0.3.0)
+* Latest elastic2-doc-manager\[eleastic2\] (currently 0.3.0)
 
 Mounts `scripts` into `/data` and then start the mongo-connector at boot with `bash /data/run.sh`.
 `run.sh` expects the environment variable `CONFIG_PATH` to point to a `mongo-connector.conf` which contains configuration options like addresses to your Mongo and ES servers.
