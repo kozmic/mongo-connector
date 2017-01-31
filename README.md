@@ -31,7 +31,7 @@ Example `docker-compose.yml`:
         - ./local-folder/config:/data/config
         
     mongo-connector1:
-      image: kozmic/mongo-connector
+      image: kozmico/mongo-connector
       volumes_from:
         - mongodata
       links:
