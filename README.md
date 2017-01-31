@@ -19,8 +19,18 @@ Example `docker-compose.yml`:
       image: mongo:2.4
       ports:
         - 27017:27017
+        
+    elasticsearch1:
+      image: elasticsearch:2.3
+      ports:
+        - 9200:9200
 
-    mongo-connector1:
+    mongodata:
+      image: tianon/true
+      volumes:
+        - ./local-folder/config:/data/config
+        
+        mongo-connector1:
       image: kozmic/mongo-connector
       volumes_from:
         - mongodata
@@ -32,14 +42,4 @@ Example `docker-compose.yml`:
       depends_on:
         - mongo1
         - elasticsearch1
-        
-    elasticsearch1:
-      image: elasticsearch:2.3
-      ports:
-        - 9200:9200
-
-    mongodata:
-      image: tianon/true
-      volumes:
-        - ./local-folder/config:/data/config
 ```
