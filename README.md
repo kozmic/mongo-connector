@@ -1,5 +1,5 @@
 # mongo-connector
-Dockerized Mongo Connector that uses volumes, a config file, and latest document manager for Elasticsearch 2.x. Automated build at dockerhub https://hub.docker.com/r/kozmic/mongo-connector
+Dockerized Mongo Connector that uses volumes, a config file, and latest document manager for Elasticsearch 2.x. Automated build at dockerhub https://hub.docker.com/r/kozmico/mongo-connector
 
 Tested with Mongo 2.4.x and Elasticsearch 2.3.
 
@@ -30,7 +30,7 @@ Example `docker-compose.yml`:
       volumes:
         - ./local-folder/config:/data/config
         
-        mongo-connector1:
+    mongo-connector1:
       image: kozmic/mongo-connector
       volumes_from:
         - mongodata
