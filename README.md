@@ -1,3 +1,5 @@
+This fork adds the configuration option `WAIT_FOR_PRIMARY`, legal values are `enabled` and `disabled`. Enabling this will wait for the tcp port to the mongo server to be open before it connects, and will wait for the mongo server to be the primary replication set before starting the mongo-connector.
+
 # mongo-connector
 Dockerized Mongo Connector that uses volumes, a config file, and latest document manager for Elasticsearch 2.x. Automated build at dockerhub https://hub.docker.com/r/kozmico/mongo-connector
 
@@ -39,6 +41,7 @@ Example `docker-compose.yml`:
         - elasticsearch1:elasticsearch
       environment:
         - CONFIG_PATH=/data/config/mongo-connector.conf
+	- WAIT_FOR_PRIMARY=enabled
       depends_on:
         - mongo1
         - elasticsearch1
