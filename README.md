@@ -41,7 +41,7 @@ Example `docker-compose.yml`:
         - elasticsearch1:elasticsearch
       environment:
         - CONFIG_PATH=/data/config/mongo-connector.conf
-	- WAIT_FOR_PRIMARY=enabled
+        - WAIT_FOR_PRIMARY=enabled
       depends_on:
         - mongo1
         - elasticsearch1
